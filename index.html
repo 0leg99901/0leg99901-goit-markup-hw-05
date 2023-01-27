@@ -43,8 +43,7 @@
          
           <div class="container">
             <h1>Ефективні рішення для вашого бізнесу</h1>
-            <button class="button-cap" type="button">Замовити послугу</button>
-          </nav>
+            <button  class="button-cap" type="button"data-modal-open>Замовити послугу</button>
           </div>
      
         </section> 
@@ -95,12 +94,15 @@
         
         <h2> Чим ми займаємося</h2>
         <ul class="we_do_section">
-          <li>
+          <li class="item">
             <img
               src="./images/img-копія-2.jpg"
               alt="робота з кодом на планшеті з клавіатурою"
               width="370"
             />
+            <div class="we_do_content">
+              <p class="we_do_info">Десктопні додатки</p>
+            </div>
           </li>
           <li>
             <img
@@ -108,6 +110,9 @@
               alt="робота з телефоними програмами на сірому комп`ютері"
               width="370"
             />
+            <div class="we_do_content">
+              <p class="we_do_info">Мобільні додатки</p>
+            </div>
           </li>
           <li>
             <img
@@ -115,6 +120,9 @@
               alt="робота на планшеті з кольористикою"
               width="370"
             />
+            <div class="we_do_content">
+              <p class="we_do_info">Дизайнерські рішення</p>
+            </div>
           </li>
         </ul>
       </div>
@@ -353,6 +361,15 @@
       </div>
       </div>
   </footer>
-
+  <div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+      <p></p>
+      <button class="cap_ellipse" data-modal-close>
+        <svg class="ellipse">
+          <use href="./images/symbol-defs.svg#vector"></use>
+        </svg>
+      </button>
+    </div>
+    <script src="./js/modal.js"></script>
 </body> 
 </html>
