@@ -74,6 +74,7 @@ p {
   align-items: center;
   margin: 0;
   padding: 0;
+  transition:color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* logotype*/
@@ -113,6 +114,7 @@ p {
   margin: 0;
   padding-top: 32px;
   padding-bottom: 32px;
+  transition:color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -228,6 +230,7 @@ border-radius: 2px;
   line-height: 1.88;
   align-items: center;
   letter-spacing: 0.06em;
+  transition:color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*features*/
 .features {
@@ -422,7 +425,7 @@ border-radius: 0px 0px 4px 4px;
 }
 .list-button:hover,
 .list-button:focus {
-  background: var(--accent-color);
+  background-color: var(--accent-color);
   color: #ffffff;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 
@@ -440,7 +443,7 @@ border-radius: 0px 0px 4px 4px;
   text-align: center;
   letter-spacing: 0.03em;
   padding: 6px 22px;
-  transition:background-color,250ms cubic-bezier(0.4, 0, 0.2, 1); 
+  transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),color 250ms cubic-bezier(0.4, 0, 0.2, 1),box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 /* portfolio project*/
 .project-list{
@@ -462,7 +465,9 @@ border-radius: 0px 0px 4px 4px;
   background: #ffffff;
   text-decoration: none;
   position: relative;
+  transition:transform 250ms cubic-bezier(0.4, 0, 0.2, 1),box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .card:hover,.card:focus{
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -485,6 +490,7 @@ border-radius: 0px 0px 4px 4px;
   position: relative;
   max-height: 294px;
   overflow: hidden;
+  transition:transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .card_img:hover .card_img_info,
 .card_img:focus .card_img_info:focus {
@@ -504,7 +510,7 @@ position: absolute;
   top: 0;
   bottom: 0;
   transform: translateY(100%);
-  transition:background-color,250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   
 }
 .card_img_info:hover,
@@ -589,6 +595,12 @@ color: #FFFFFF;
  
   
 }
+.cap-tel{
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.cap-mailto{
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .cap-mailto:hover,
 .cap-mailto:focus{
   color: var(--accent-color);
@@ -652,7 +664,8 @@ margin-left: 10px;
   border-radius: 50%;
   justify-content: center;
   align-items: center;
-  fill: #AFB1B8;;
+  fill: #AFB1B8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-icon:hover,
 .social-icon:focus{
@@ -710,6 +723,7 @@ margin-left: 10px;
   border: 1px solid #AFB1B8;
   border-radius: 4px;
   fill: #AFB1B8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),border 250ms cubic-bezier(0.4, 0, 0.2, 1),border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
 .join{
   display: flex;
@@ -759,11 +773,12 @@ color: #FFFFFF;
 .join-icon{
   background: rgba(255, 255, 255, 0.1);
   fill:#FFFFFF;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .join-icon:hover,
 .join-icon:focus{
-  background: var(--accent-color);
+  background-color: var(--accent-color);
 }
 
 .backdrop {
@@ -775,15 +790,18 @@ height: 100%;
 background: rgba(0,0,0,0.2);
 padding: 93px 15px;
 opacity: 1;
-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop.is-hidden {
-  opacity: 0;
+ opacity: 0;
   pointer-events: none;
-  visibility: visible;
+  visibility:hidden;
 }
 .backdrop.backdrop.is-hidden.modal{
   transform:translate(-50%, -50%) scale(0.9);
+  
+
+
 }
 
 .modal {
@@ -800,7 +818,7 @@ background: #FFFFFF;
 box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%), 0px 2px 1px rgb(0 0 0 / 20%);
 border-radius: 4px;
 transform:translate(-50%, -50%) scale(1);
-transition:transform,250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+transition:transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 .cap_ellipse{
@@ -816,6 +834,7 @@ border-radius: 50%;
 background: #FFFFFF;
 border: 1px solid rgba(0,0,0,0.1);
 fill: #000000;
+
 }
 .ellipse {
 width: 11px;
